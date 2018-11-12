@@ -1,0 +1,23 @@
+<% if notice.present? %>
+    <div class="alert alert-primary notice" role="alert">
+     <%= notice %>
+    </div>
+  <% end %>
+
+<p>
+  <strong>Content:</strong>
+  <%= @question.content %>
+</p>
+
+<p>
+  <strong>Answer:</strong>
+  <%= @question.answer %>
+</p>
+<hr/>
+<%= link_to 'Edit', edit_question_path(@question), class: 'btn btn-success' %> |
+<%= link_to 'Back', questions_path, class: 'btn btn-light'%>
+<style type="text/css">
+  .wrap-login100 {
+    display: block;
+  }
+</style>

@@ -1,0 +1,32 @@
+<% size = params[:correct_answer].to_i + params[:wrong_answer].to_i %>
+<% if params[:correct_answer].to_i == size %>
+	<div class="text-center">
+	  <img src="https://media.giphy.com/media/P5VmnAcgCBs5y/giphy.gif" class="rounded" >
+	</div><br/><br/>
+   <h2>Well Done!! You are the Best!</h2>
+   <br/><br/>
+<% elsif params[:correct_answer].to_i >= params[:wrong_answer].to_i %>
+	<div class="text-center">
+	  <img src="https://thumbs.gfycat.com/BriefNauticalDairycow-max-1mb.gif" class="rounded" >
+	</div>
+	<br/><br/>
+	<h2>Cool!! your answer is good!</h2>
+	<br/><br/>
+<% else %>
+	<div class="text-center">
+	  <img src="https://media1.tenor.com/images/5acb9fcf00014681bbbd22c338d900db/tenor.gif?itemid=10164073" class="rounded" >
+	</div>
+	<br/><br/>
+	<h2>Whats wrong with you? Your answer is not correctly</h2>
+	<br/><br/>
+<% end %>
+
+<div class="actions form-group">
+	<a href="<%= root_path %>" class="btn btn-info">Back to Homepage</a>
+</div>
+
+<style type="text/css">
+  .wrap-login100 {
+    display: block;
+  }
+</style>

@@ -1,0 +1,26 @@
+<% if current_user %>
+  Logged in as <%= current_user.email %>.
+  <%= link_to "Log Out", logout_path %>
+<% else %>
+  <%= link_to "Sign Up", signup_path %> or
+  <%= link_to "Log In", login_path %>
+<% end %>
+<p id=”notice”><%= notice %></p><hr/>
+This is an example of the question.. <br/><br/>
+<%= form_tag process_question_path do %>
+	<% @questions.each_with_index do |q, i| %>
+		<div class="alert alert-primary" role="alert">
+		  <p><%= simple_format(q.content) %></p>
+		  <hr>
+		   <input type="text" name="answers[<%= q._id %>]" class="form-control" placeholder="answer here" required>
+		</div>
+	<% end %>
+	<div class="actions form-group">
+	    <button type="submit" class="btn btn-primary">Submit Now!</button>
+	  </div>
+<% end %>
+<style type="text/css">
+  .wrap-login100 {
+    display: block;
+  }
+</style>
