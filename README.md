@@ -48,7 +48,7 @@ rspec spec
 
 ## Authors
 
-* **Deden Ari Januar** - *Ruby on Rails Geekers* - [PurpleBooth](https://github.com/dedennufan)
+* **Deden Ari Januar** - *Ruby on Rails Geekers* - [DedenNufan](https://github.com/dedennufan)
 
 ## License
 
